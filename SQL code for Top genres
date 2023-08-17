@@ -1,0 +1,10 @@
+--SQL code for top genres for movies at Rockbuster Stealth LLC
+SELECT category.name, SUM(payment.amount) AS top_genres
+FROM payment
+JOIN rental ON payment.customer_id = rental.customer_id
+JOIN inventory ON rental.inventory_id = inventory.inventory_id
+JOIN film_category ON inventory.film_id = film_category.film_id
+JOIN category ON film_category.category_id = category.category_id
+GROUP BY category.name
+ORDER BY SUM(payment.amount) DESC
+Limit 10;
