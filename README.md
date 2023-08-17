@@ -1,5 +1,4 @@
 #Rockbuster SQL-Data-Analytics
-
 Data Analytics project that used PostgreSQL for analyzing data from a fictional movie rental company named Rockbuster Stealth.
 
 OBJECTIVE
